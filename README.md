@@ -1,9 +1,34 @@
-# WebOSClient
+# WebOSClient (Kwaefly Fork)
 
 [![Swift Version](https://img.shields.io/badge/Swift-5.9-orange.svg)](https://swift.org/)
 [![SPM Compatible](https://img.shields.io/badge/SwiftPM-Compatible-brightgreen.svg)](https://swiftpackageindex.com/exyte/ActivityIndicatorView)
-[![Cocoapods Compatible](https://img.shields.io/badge/cocoapods-Compatible-brightgreen.svg)](https://cocoapods.org/pods/SVGView)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+Forked from [jareksedy/WebOSClient](https://github.com/jareksedy/WebOSClient) with additional features for deep linking and app management.
+
+## Fork Additions
+
+### Implemented
+- [x] `listRunningApps` - Get list of currently running apps (`ssap://com.webos.applicationManager/running`)
+
+### Planned
+- [ ] `launchApp` with dictionary params (currently String only)
+- [ ] Channel list and direct channel setting
+- [ ] Enhanced response models for running apps
+
+### Deep Link Testing Results (WebOS)
+
+| App | Working Formats | Cold Start |
+|-----|----------------|------------|
+| YouTube | HTTPS URL, Raw ID, `v=ID` | No - needs warm start |
+| YouTube TV | `v=ID` | No - needs warm start |
+| Prime Video | Raw ASIN, `aiv://`, `asin=ID` | Yes |
+| Peacock | None working | - |
+| Max | None working | - |
+
+---
+
+## Original README
 
 WebOSClient is a Swift library designed to facilitate communication with Smart TVs running WebOS, such as LG TVs. It provides a convenient interface to connect to the TV, send commands, and manage various TV-related functionalities.
 

@@ -87,6 +87,9 @@ public enum WebOSTarget {
     /// Retrieves a list of installed apps.
     case listApps
 
+    /// Retrieves a list of currently running apps.
+    case listRunningApps
+
     /// Retrieves the foreground app with optional subscription.
     /// - Parameter subscribe: If true, subscribes to foreground app changes; if false, unsubscribes from foreground app changes; if nil, no subscription.
     case getForegroundApp(subscribe: Bool? = nil)
