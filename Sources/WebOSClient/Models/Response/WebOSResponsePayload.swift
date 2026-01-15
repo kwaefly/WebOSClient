@@ -46,7 +46,8 @@ public struct WebOSResponsePayload: Codable {
     public let currentWidget: WebOSResponseCurrentWidget?
     public let devices: [WebOSResponseDevice]?
     public let foregroundAppInfo: [WebOSResponseForegroundAppInfo]?
-    
+    public let running: [WebOSResponseApplication]?
+
     enum CodingKeys: String, CodingKey {
         case errorText
         case pairingType
@@ -88,5 +89,6 @@ public struct WebOSResponsePayload: Codable {
         case currentWidget
         case devices
         case foregroundAppInfo
+        case running
     }
 }
